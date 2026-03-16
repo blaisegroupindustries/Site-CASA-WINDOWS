@@ -593,10 +593,11 @@ main{min-width:0}
   <div class="footer-icons" id="footerIcons"></div>
   <div class="footer-copy">
     <span>© 2025 CASA WINDOWS · Nampula, Moçambique</span>
-    <div style="display:flex;align-items:center;gap:14px">
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
       <a href="talvez.html"><i class="fas fa-circle-info"></i> Sobre Nós</a>
       <a href="https://www.facebook.com/profile.php?id=61562855252848" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://wa.me/258842785290" target="_blank"><i class="fab fa-whatsapp"></i> +258 84 278 5290</a>
+      <a href="https://wa.me/258842785290" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+258842785290"><i class="fas fa-phone"></i> Telefone</a>
     </div>
   </div>
 </footer>
@@ -960,7 +961,7 @@ function toast(msg,icon='fa-check'){
 }
 window.addEventListener('scroll',()=>{$('btt').classList.toggle('on',window.scrollY>400);},{passive:true});
 const FOOTER_ICONS=[
-  {label:'Aluguer Som',icon:null,img:'Icone_aluguer.jpg',filter:'audio-aluguer'},
+  {label:'Aluguer Som',icon:null,img:'Icone_aluguer.png',filter:'audio-aluguer'},
   {label:'Computadores',icon:'fa-laptop',img:null,filter:'pc'},
   {label:'Laptops i3',icon:'fa-computer',img:null,filter:'pc-corei3'},
   {label:'Laptops i5',icon:'fa-microchip',img:null,filter:'pc-corei5'},
