@@ -487,12 +487,15 @@ main{min-width:0}
 
 <div class="m-chips" id="mChips">
   <div class="chip on" onclick="filterBy('todos',this)">Tudo</div>
-  <div class="chip" onclick="filterBy('audio',this)">Áudio</div>
-  <div class="chip" onclick="filterBy('audio-aluguer',this)">Aluguer Som</div>
-  <div class="chip" onclick="filterBy('pc',this)">Computadores</div>
+  <div class="chip" onclick="filterBy('audio',this)">Som</div>
+  <div class="chip" onclick="filterBy('pc-acessorios',this)">Carregadores</div>
+  <div class="chip" onclick="filterBy('pc',this)">Laptops</div>
+  <div class="chip" onclick="filterBy('pc-desktop',this)">Desktop</div>
+  <div class="chip" onclick="filterBy('pc-hardware',this)">Processadores</div>
+  <div class="chip" onclick="filterBy('pc-monitor',this)">Monitores</div>
+  <div class="chip" onclick="filterBy('pc-projector',this)">Projectores</div>
+  <div class="chip" onclick="filterBy('acessorios',this)">Acessórios</div>
   <div class="chip" onclick="filterBy('moda',this)">Moda</div>
-  <div class="chip" onclick="filterBy('acessorios',this)">Outros</div>
-  <a href="talvez.html" class="chip" style="text-decoration:none"><i class="fas fa-circle-info"></i> Sobre</a>
 </div>
 
 <div class="cat-strip" id="catStrip"></div>
@@ -771,10 +774,10 @@ const $=id=>document.getElementById(id);
 const fmt=n=>n.toLocaleString('pt-MZ');
 const CATS=[
   {key:'todos',label:'Ver Tudo',icon:'fa-border-all'},
-  {key:'audio',label:'Áudio',icon:'fa-music'},
+  {key:'audio',label:'Som',icon:'fa-music'},
   {key:'pc',label:'Computadores',icon:'fa-laptop'},
   {key:'moda',label:'Moda',icon:'fa-shirt'},
-  {key:'acessorios',label:'Outros',icon:'fa-box-open'},
+  {key:'acessorios',label:'Acessórios',icon:'fa-box-open'},
 ];
 const CAT_LABELS={
   'todos':'Todos os Produtos','audio':'Áudio Profissional',
@@ -961,13 +964,14 @@ function toast(msg,icon='fa-check'){
 }
 window.addEventListener('scroll',()=>{$('btt').classList.toggle('on',window.scrollY>400);},{passive:true});
 const FOOTER_ICONS=[
-  {label:'Aluguer Som',icon:null,img:'Icone_aluguer.png',filter:'audio-aluguer'},
-  {label:'Computadores',icon:'fa-laptop',img:null,filter:'pc'},
-  {label:'Laptops i3',icon:'fa-computer',img:null,filter:'pc-corei3'},
-  {label:'Laptops i5',icon:'fa-microchip',img:null,filter:'pc-corei5'},
+  {label:'Som',icon:null,img:'Icone_aluguer.png',filter:'audio'},
+  {label:'Carregadores',icon:'fa-plug',img:null,filter:'pc-acessorios'},
+  {label:'Laptops',icon:'fa-laptop',img:null,filter:'pc'},
+  {label:'Desktop',icon:'fa-computer',img:null,filter:'pc-desktop'},
+  {label:'Processadores',icon:'fa-microchip',img:null,filter:'pc-hardware'},
   {label:'Monitores',icon:'fa-desktop',img:null,filter:'pc-monitor'},
-  {label:'Audio Venda',icon:'fa-music',img:null,filter:'audio-venda'},
-  {label:'Acessorios',icon:'fa-box-open',img:null,filter:'acessorios'},
+  {label:'Projectores',icon:'fa-video',img:null,filter:'pc-projector'},
+  {label:'Acessórios',icon:'fa-box-open',img:null,filter:'acessorios'},
   {label:'Moda',icon:'fa-shirt',img:null,filter:'moda'},
 ];
 function buildFooter(){
